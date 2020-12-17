@@ -17,10 +17,10 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->teext('body');
+            $table->text('body');
 
-            $table->integer('category_id')-unsigned();
-            $table->integer('user_id')-unsigned();
+            $table->integer('category_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             
             $table->timestamps();
         });
