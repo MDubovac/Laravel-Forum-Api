@@ -9,4 +9,6 @@ class Like extends Model
     public function reply(){
         return $this->belongsTo(Reply::class);
     }
+
+    protected $guarded = [];
 }

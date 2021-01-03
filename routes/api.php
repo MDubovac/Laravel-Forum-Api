@@ -18,6 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Question Routes
 Route::apiResource('/question', 'QuestionController');
+
+// Category Routes
 Route::apiResource('/category', 'CategoryController');
+
+// Reply Routes
 Route::apiResource('/question/{question}/reply', 'ReplyController');
+Route::post('/like/{reply}', 'LikeController@likeIt'); // Like The Reply
+Route::delete('/like/{reply}', 'LikeController@dislikeIt'); // Dislike The Reply
