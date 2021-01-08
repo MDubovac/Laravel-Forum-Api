@@ -23,5 +23,6 @@ class DatabaseSeeder extends Seeder
             return $reply->likes()->save(factory(Like::class)->make());
         });
 
+        $this->call(UserSeeder::class);
     }
 }
